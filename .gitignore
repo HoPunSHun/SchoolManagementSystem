@@ -1,1 +1,4 @@
-MakeFile
+makefile
+
+output
+output/*
