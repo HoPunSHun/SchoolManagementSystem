@@ -11,35 +11,35 @@ Student::Student(const std::string &name, int number, const std::string &id)
 
 }
 
-std::string Student::GetName()
+std::string Student::GetName() const
 {
 
 	return m_name;
 
 }
 
-int Student::GetNumber()
+int Student::GetNumber() const
 {
 
 	return m_number;
 
 }
 
-std::string Student::GetYear()
+std::string Student::GetYear() const
 {
 
 	return m_year;
 
 }
 
-std::string Student::GetYearId()
+std::string Student::GetYearId() const
 {
 
 	return m_yearId;
 
 }
 
-std::string Student::GetId()
+std::string Student::GetId() const
 {
 
 	return m_id;

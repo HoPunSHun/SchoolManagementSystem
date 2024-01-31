@@ -11,15 +11,15 @@ public:
 
 	Student(const std::string &name, int m_number, const std::string &id);
 
-	std::string GetName();
+	std::string GetName() const;
 
-	int GetNumber();
+	int GetNumber() const;
 
-	std::string GetYear();
+	std::string GetYear() const;
 
-	std::string GetYearId();
+	std::string GetYearId() const;
 
-	std::string GetId();
+	std::string GetId() const;
 
 private:
 

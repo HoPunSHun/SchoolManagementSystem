@@ -7,16 +7,29 @@
 #include <map>
 
 typedef std::map<std::string, std::shared_ptr<Student>> StudentNameMap;
-typedef std::map<char, std::shared_ptr<Student>> StudentNumberMap;
+typedef std::map<char, std::shared_ptr<Student>> StudentNumMap;
 
-class Class
+class StudentClass
 {
 
 public:
 
-	Class() = default;
+	StudentClass() = default;
 
-	Class(int form, char name);
+	StudentClass(int form, char name);
+
+	void AddStudent(const std::string &name, int number, const std::string &id);
+
+	const StudentNameMap &GetStudentNameMap() const;
+	const StudentNumMap &GetStudentNumMap() const;
+
+private:
+
+	bool StudentExist(const std::string &name) const;
+	bool StudentExist(int number) const;
+
+	std::shared_ptr<Student> GetStudent(const std::string &name);
+	std::shared_ptr<Student> GetStudent(int number);
 
 private:
 
@@ -24,6 +37,6 @@ private:
 	char m_name;
 
 	StudentNameMap m_studentNameMap;
-	StudentNumberMap m_studentNumMap;
+	StudentNumMap m_studentNumMap;
 
 };
