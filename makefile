@@ -28,12 +28,24 @@ Student.o:
 debug-Student.o:
 	g++ src/Student.cpp -c -g
 
-compile: main.o SchoolYear.o StudentClass.o Student.o
+StudentForm.o:
+	g++ src/StudentForm.cpp -c
 
-debug-compile: debug-main.o debug-SchoolYear.o debug-StudentClass.o debug-Student.o
+debug-StudentForm.o:
+	g++ src/StudentForm.cpp -c -g
+
+System.o:
+	g++ src/System.cpp -c
+
+debug-System.o:
+	g++ src/System.cpp -c -g
+
+compile: main.o SchoolYear.o StudentClass.o Student.o StudentForm.o System.o
+
+debug-compile: debug-main.o debug-SchoolYear.o debug-StudentClass.o debug-Student.o debug-System.o debug-StudentForm.o
 
 link:
-	g++ main.o SchoolYear.o StudentClass.o Student.o -o output/main
+	g++ main.o SchoolYear.o StudentClass.o Student.o System.o StudentForm.o -o output/main
 
 clean:
 	rm *.o

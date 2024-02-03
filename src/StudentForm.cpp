@@ -1,6 +1,6 @@
 #include "StudentForm.h"
 
-StudentForm(int formNumber)
+StudentForm::StudentForm(int formNumber)
 	:	m_formNumber	(formNumber)
 {}
 
@@ -11,7 +11,7 @@ void StudentForm::AddStudentClass(char className)
 
 }
 
-bool StudentClassExist(char className)
+bool StudentForm::StudentClassExist(char className)
 {
 
 	if (m_studentClassMap.find(className) == m_studentClassMap.end())
