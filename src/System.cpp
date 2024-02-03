@@ -7,6 +7,13 @@ void System::AddForm(int formNumber)
 
 }
 
+void System::DeleteForm(int formNumber)
+{
+
+	m_studentForms.erase(formNumber);
+
+}
+
 bool System::FormExist(int formNumber)
 {
 
@@ -18,5 +25,12 @@ std::shared_ptr<StudentForm> System::GetForm(int formNumber)
 {
 
 	return m_studentForms[formNumber];
+
+}
+
+StudentFormMap &System::GetForms()
+{
+
+	return m_studentForms;
 
 }

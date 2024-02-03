@@ -25,6 +25,13 @@ bool StudentForm::StudentClassExist(char className)
 
 }
 
+std::shared_ptr<StudentClass> StudentForm::GetStudentClass(char className)
+{
+
+	return m_studentClassMap[className];
+
+}
+
 const StudentClassMap &StudentForm::GetStudentClasses()
 {
 

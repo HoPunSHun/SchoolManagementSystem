@@ -18,10 +18,13 @@ public:
 	System() = default;
 
 	void AddForm(int formNumber);
+	void DeleteForm(int formNumber);
 
 	bool FormExist(int formNumber);
 
 	std::shared_ptr<StudentForm> GetForm(int formNumber);
+
+	StudentFormMap &GetForms();
 
 private:
 

@@ -21,6 +21,8 @@ public:
 
 	bool StudentClassExist(char className);
 
+	std::shared_ptr<StudentClass> GetStudentClass(char className);
+
 	const StudentClassMap &GetStudentClasses();
 
 private:
